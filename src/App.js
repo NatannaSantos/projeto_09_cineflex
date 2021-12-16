@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
+import Sessoes from "./components/Sessoes";
 import axios from 'axios';
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<MainPage filmes={filmes} />}></Route>
+                <Route path="/sessoes" element={<Sessoes />}></Route>
             </Routes>
         </BrowserRouter>
     );
