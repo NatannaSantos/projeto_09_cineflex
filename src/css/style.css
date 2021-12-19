@@ -4,7 +4,6 @@
   
   body {
     width:365px;
-    height: 100vw;
     font-family: 'Roboto', sans-serif;
   }
   .header{
@@ -16,16 +15,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position:fixed;
+    width:375px;
   }
   .main-page{
     width: 100%;
     background-color: #FFFFFF;
     padding: 25px;
+    margin-bottom: 120px;
   }
   .titulo-pagina h1{
     font-size: 24px;
     color:#293845;
-    margin-top:20px;
+    margin-top:100px;
     margin-bottom:50px;
     display: flex;
     justify-content: center;
@@ -49,3 +51,50 @@
     width:129px;
     height:193px;
   }
+  .data{
+    font-size: 20px;
+    color: #293845;
+    margin-bottom:25px;
+  }
+  .horario{
+    display:flex;
+  }
+  .horario button{
+    width: 83px;
+    height: 43px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #E8833A;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+  }
+  footer{
+    width: 375px;
+    height: 117px;
+    background-color: #DFE6ED;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;   
+   }
+    .cartaz-filme{
+      width: 64px;
+      height: 89px;
+      background-color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      margin-right: 14px;
+    }
+    footer img{
+      width: 48px;
+      height: 72px;
+   }
+   footer p{
+     font-size: 26px;
+     color: #293845;
+
+   }
