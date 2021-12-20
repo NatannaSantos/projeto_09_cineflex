@@ -115,4 +115,57 @@
   justify-content: center;
   font-size: 11px;
 }
+.exemplo-assentos{
+  display: flex;
+  justify-content: space-around;
+}
+.selecionado,.disponivel, .indisponivel{
+  width: 26px;
+  height: 26px;
+  border-radius: 12px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+.selecionado{
+  border: 1px solid #3BAE9E;
+  background-color: #8DD7CF;
+}
+
+.disponivel {
+  border: 1px solid #808F9D;
+  background-color: #C3CFD9;  
+}
+.indisponivel {
+  border: 1px solid #F7C63D;
+  background-color: #FBE192;  
+}
+.exemplo{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.exemplo p{
+  font-size: 13px;
+  color: #4E5A65;
+  margin-top: 10px;
+}
+.cadastro{
+  margin-top:42px;
+}
+.cadastro p{
+  font-size: 18px;
+  color: #293845;
+}
+input{
+  width: 327px;
+  height: 51px;
+  border-color: #D4D4D4;
+  margin-top: 10px;
+}
+::placeholder{
+  font-size: 18px;
+  font-style: italic;
+}
+
 

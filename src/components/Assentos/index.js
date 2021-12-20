@@ -29,6 +29,28 @@ export default function Assentos() {
                 <div className="assentos">
                     {assento.map(cadeira => <Assento {...cadeira} />)}
                 </div>
+                <div className="exemplo-assentos">
+                    <div className="exemplo">
+                        <div className="selecionado"></div>
+                        <p>Selecionado</p>
+                    </div>
+                    <div className="exemplo">
+                        <div className="disponivel"></div>
+                        <p>Disponível</p>
+                    </div>
+                    <div className="exemplo">
+                        <div className="indisponivel"></div>
+                        <p>Indisponível</p>
+                    </div>
+                </div>
+                <div className="cadastro">
+                    <p>Nome do comprador: </p>
+                    <input placeholder="Digite seu nome..." />
+                </div>
+                <div className="cadastro">
+                    <p>CPF do comprador: </p>
+                    <input placeholder="Digite seu CPF..." />
+                </div>
             </div>
         </>
     );
