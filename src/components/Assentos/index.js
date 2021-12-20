@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Assento from "../Assento";
+import { Link } from "react-router-dom";
 
 export default function Assentos() {
     const { idSessao } = useParams();
@@ -10,6 +11,9 @@ export default function Assentos() {
     const [titulo, setTitulo] = useState();
     const [dia, setDia] = useState();
     const [hora, setHora] = useState();
+    const [nome,setNome] = useState();
+    const [cpf, setCpf] = useState();
+
 
     function renderizarResposta(resposta) {
         setAssento(resposta.data.seats);
@@ -53,12 +57,17 @@ export default function Assentos() {
                 </div>
                 <div className="cadastro">
                     <p>Nome do comprador: </p>
-                    <input placeholder="Digite seu nome..." />
+                    <input type = "text" placeholder="Digite seu nome..." value= {nome} onChange={(e)=> setNome(e.target.value) }/>
                 </div>
                 <div className="cadastro">
                     <p>CPF do comprador: </p>
-                    <input placeholder="Digite seu CPF..." />
+                    <input type = "number" placeholder="Digite seu CPF..." value = {cpf} onChange={(e)=> setCpf(e.target.value) } />
                 </div>
+            </div>
+            <div className="reserva-assento">
+                <Link to="/sucesso">
+                    <button className="reserva">Reservar assento(s)</button>
+                </Link>
             </div>
             <footer className="rodape-assento">
                 <div className="cartaz-filme">

@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import Sessoes from "./components/Sessoes";
 import Assentos from "./components/Assentos";
+import Sucesso from "./components/Sucesso";
+
 import axios from 'axios';
 
 export default function App() {
@@ -26,6 +28,7 @@ export default function App() {
                 <Route path="/" element={<MainPage filmes={filmes} />}></Route>
                 <Route path="/sessoes/:idFilme" element={<Sessoes />}></Route>
                 <Route path="/assentos/:idSessao" element={<Assentos />}></Route>
+                <Route path="/sucesso" element={<Sucesso />}></Route>
             </Routes>
         </BrowserRouter>
     );
