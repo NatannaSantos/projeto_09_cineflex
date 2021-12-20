@@ -1,11 +1,13 @@
 import { useState } from "react";
 
 export default function Assento({ name, isAvailable }){
-    const [selected,setSelected] = useState(false);
+    const [selected,setSelected] = useState(false); 
+    console.log(selected);
+
 
     function checkSeat(check) {
-        isAvailable === 'selecionado' ? isAvailable = true : isAvailable === true ? isAvailable = 'selecionado' : isAvailable = false;
-        !check ? alert('Esse assento não está disponível') : selected === false ? setSelected(true) : setSelected(false);
+       
+        !check ? alert('Esse assento não está disponível') : (selected === false ? setSelected(true) : setSelected(!selected));
         
     }
      
@@ -13,7 +15,7 @@ export default function Assento({ name, isAvailable }){
     return (
 
         <div 
-        className={`assento ${isAvailable === false ? "indisponivel"  : " "}`} 
+        className={`assento ${selected ? "selecionado" : ( isAvailable ? "disponivel" : "indisponivel")}`} 
         onClick={()=> checkSeat(isAvailable) }       
         >
             
