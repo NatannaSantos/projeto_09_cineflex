@@ -96,5 +96,23 @@
    footer p{
      font-size: 26px;
      color: #293845;
-
    }
+   .assentos{
+    display: flex;
+    flex-wrap: wrap;  
+  }
+
+.assento{
+  width: 26px;
+  height: 26px;
+  background-color: #C3CFD9;
+  border: 1px solid #808F9D;
+  border-radius: 12px;
+  margin-right: 5px;
+  margin-bottom:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+

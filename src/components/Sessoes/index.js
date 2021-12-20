@@ -39,7 +39,6 @@ export default function Sessoes() {
                 </div>
                 <div className="sessoes">
                     {filme.map(cartaz => <Sessao {...cartaz} />)}
-
                 </div>
             </div>
             <footer>
