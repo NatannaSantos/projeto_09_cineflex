@@ -21,7 +21,8 @@ export default function Assentos() {
     const [data,setData]=useState();
 
     comprador = {nome: nome, CPF:cpf}
-    filmeEscolhido ={tema:titulo, dia:data, hora:hora}    
+    filmeEscolhido ={tema:titulo, dia:data, hora:hora}   
+   
 
 
     function renderizarResposta(resposta) {

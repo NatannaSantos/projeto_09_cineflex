@@ -1,13 +1,17 @@
 import { useState } from "react";
+export {assentoReservado};
 
-export default function Assento({ name, isAvailable }){
-    const [selected,setSelected] = useState(false); 
-    console.log(selected);
+let assentoReservado = [];
+
+export default function Assento({ name, isAvailable, id }){
+    const [selected,setSelected] = useState(false);
+     
 
 
     function checkSeat(check) {
        
         !check ? alert('Esse assento não está disponível') : (selected === false ? setSelected(true) : setSelected(!selected));
+        assentoReservado.push ({poltrona:id});
         
     }
      

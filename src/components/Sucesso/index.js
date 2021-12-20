@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
 import { comprador } from "../Assentos";
+import { assentoReservado } from "../Assento";
 import { filmeEscolhido } from "../Assentos";
 
 export default function Sucesso() {
+    let string = '';
+    for(let i=0;i<assentoReservado.length;i++){
+        console.log(assentoReservado[i].poltrona);
+        string+= assentoReservado[i].poltrona + '; ';
+    }
+  
+    
     return (
         <>
             <div className="main-page">
@@ -16,7 +24,7 @@ export default function Sucesso() {
                 </div>
                 <div className="pedidoSessao">
                     <h1>Ingressos</h1>
-                    <p>poltrona</p>
+                    <p>{string}</p>
                 </div>
                 <div className="pedidoSessao">
                     <h1>Comprador</h1>
