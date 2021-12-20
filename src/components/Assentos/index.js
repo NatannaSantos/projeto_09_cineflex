@@ -18,10 +18,10 @@ export default function Assentos() {
     const [hora, setHora] = useState();
     const [nome,setNome] = useState();
     const [cpf, setCpf] = useState();
-    
+    const [data,setData]=useState();
 
     comprador = {nome: nome, CPF:cpf}
-    filmeEscolhido ={tema:titulo, dia:dia, hora:hora}    
+    filmeEscolhido ={tema:titulo, dia:data, hora:hora}    
 
 
     function renderizarResposta(resposta) {
@@ -30,6 +30,7 @@ export default function Assentos() {
         setTitulo(resposta.data.movie.title);
         setDia(resposta.data.day.weekday);
         setHora(resposta.data.name);
+        setData(resposta.data.day.date);
     }
    
 
@@ -40,7 +41,6 @@ export default function Assentos() {
     if (!assento) {
         return <h1> Carregando... </h1>
     }
-
 
     return (
         <>
