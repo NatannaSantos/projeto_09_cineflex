@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { comprador } from "../Assentos";
+import { filmeEscolhido } from "../Assentos";
 
 export default function Sucesso() {
     return (
@@ -9,8 +11,8 @@ export default function Sucesso() {
                 </div>
                 <div className="pedidoSessao">
                     <h1>Filme e Sessão</h1>
-                    <p>Nome do filme</p>
-                    <p> data e hora </p>
+                    <p>{filmeEscolhido.tema}</p>
+                    <p> {filmeEscolhido.dia}-{filmeEscolhido.hora}</p>
                 </div>
                 <div className="pedidoSessao">
                     <h1>Ingressos</h1>
@@ -18,8 +20,8 @@ export default function Sucesso() {
                 </div>
                 <div className="pedidoSessao">
                     <h1>Comprador</h1>
-                    <p>Nome: </p>
-                    <p>CPF: </p>
+                    <p>Nome: {comprador.nome} </p>
+                    <p>CPF: {comprador.CPF}</p>
                 </div>
             </div>
             <div className="retorno">

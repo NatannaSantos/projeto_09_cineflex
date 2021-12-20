@@ -3,6 +3,11 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Assento from "../Assento";
 import { Link } from "react-router-dom";
+export  {comprador}
+export {filmeEscolhido}
+
+let comprador ={};
+let filmeEscolhido ={};
 
 export default function Assentos() {
     const { idSessao } = useParams();
@@ -13,6 +18,10 @@ export default function Assentos() {
     const [hora, setHora] = useState();
     const [nome,setNome] = useState();
     const [cpf, setCpf] = useState();
+    
+
+    comprador = {nome: nome, CPF:cpf}
+    filmeEscolhido ={tema:titulo, dia:dia, hora:hora}    
 
 
     function renderizarResposta(resposta) {
@@ -22,6 +31,7 @@ export default function Assentos() {
         setDia(resposta.data.day.weekday);
         setHora(resposta.data.name);
     }
+   
 
     useEffect(() => {
         const promessa = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/showtimes/${idSessao}/seats`);
