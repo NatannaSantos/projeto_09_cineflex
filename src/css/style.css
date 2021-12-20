@@ -167,5 +167,13 @@ input{
   font-size: 18px;
   font-style: italic;
 }
+.rodape-assento p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.agendamento{
+  display:flex;
+  flex-direction: column;
+}
 
 

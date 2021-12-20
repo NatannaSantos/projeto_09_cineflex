@@ -6,9 +6,17 @@ import Assento from "../Assento";
 export default function Assentos() {
     const { idSessao } = useParams();
     const [assento, setAssento] = useState(null);
+    const [image, setImage] = useState();
+    const [titulo, setTitulo] = useState();
+    const [dia, setDia] = useState();
+    const [hora, setHora] = useState();
 
     function renderizarResposta(resposta) {
         setAssento(resposta.data.seats);
+        setImage(resposta.data.movie.posterURL);
+        setTitulo(resposta.data.movie.title);
+        setDia(resposta.data.day.weekday);
+        setHora(resposta.data.name);
     }
 
     useEffect(() => {
@@ -52,6 +60,15 @@ export default function Assentos() {
                     <input placeholder="Digite seu CPF..." />
                 </div>
             </div>
+            <footer className="rodape-assento">
+                <div className="cartaz-filme">
+                    <img src={image} />
+                </div>
+                <div className="agendamento">
+                    <p>{titulo}</p>
+                    <p>{dia}-{hora}</p>
+                </div>
+            </footer>
         </>
     );
 }
